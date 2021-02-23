@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.brakingbadapi.qa.utils.ExcelUtils;
 import com.breakingbadapi.qa.baseTest.BaseTest;
 import com.breakingbadapi.qa.enums.ConfigProperties;
 import com.breakingbadapi.qa.pojos.Characters;
@@ -29,7 +30,7 @@ public class BreakingAPITest extends BaseTest {
 			String birthday = jsonPath.getString("birthday");
 			System.out.println("Birthday:: " + birthday);
 			Assert.assertEquals(response.getStatusCode(), 200);
-			Assert.assertEquals(birthday, "[09-07-1958]");
+			Assert.assertEquals(birthday, ExcelUtils.getCellStringData("datatest", 0, 0));
 
 		} catch (Exception e) {
 		e.getStackTrace();

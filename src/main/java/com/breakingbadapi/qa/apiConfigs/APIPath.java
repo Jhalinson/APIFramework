@@ -7,7 +7,11 @@ public class APIPath {
 	
 	private static final String CONFIGPATH =System.getProperty("user.dir")+"/inputs/config.properties";
 	private static final String REPORTPATH = System.getProperty("user.dir")+"/extent-test-output/index.html";
-	
+	private static final String EXCELPATH = System.getProperty("user.dit")+"/inputs/constdata.xlsx";
+	public static String getExcelpath() {
+		return EXCELPATH;
+	}
+
 	public static String getReportpath() {
 		return REPORTPATH;
 	}
