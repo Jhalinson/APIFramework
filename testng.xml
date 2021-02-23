@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression">
+	<listeners>
+		<listener class-name="com.breakingbadapi.qa.reports.ExtentReport"/> 
+	</listeners>
+  <test thread-count="2" name="Test">
+			<classes>
+				<class name="com.breakingbadapi.qa.test.BreakingAPITest" />
+				<class name="com.breakingbadapi.qa.baseTest.BaseTest" />
+			</classes>
+		</test> <!-- Test -->
+</suite> <!-- Suite -->
